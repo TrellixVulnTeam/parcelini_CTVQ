@@ -1,4 +1,5 @@
 export const GET_PARCEL_INFO = "GET_PARCEL_INFO";
+export const SET_ADDRESS = "SET_ADDRESS";
 export const GET_ERRORS = "GET_ERRORS";
 export const GET_MESSAGES = "GET_MESSAGES";
 export const CREATE_MESSAGE = "CREATE_MESSAGE";

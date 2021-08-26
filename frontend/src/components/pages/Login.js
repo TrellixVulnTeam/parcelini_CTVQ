@@ -25,7 +25,7 @@ export class Login extends Component {
 
   render() {
     if (this.props.isAuthenticated) {
-      return <Redirect to="/dashboard" />
+      return <Redirect to="/docs" />
     }
     const { username, password } = this.state;
     return (
@@ -36,7 +36,7 @@ export class Login extends Component {
         <div className="user-form">
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
-              <label>Username</label>
+              <label>Username</label><br/>
               <input
                 type="text"
                 className="form-control"
@@ -47,7 +47,7 @@ export class Login extends Component {
             </div>
 
             <div className="form-group">
-              <label>Password</label>
+              <label>Password</label><br/>
               <input
                 type="password"
                 className="form-control"

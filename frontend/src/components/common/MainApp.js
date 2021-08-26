@@ -11,6 +11,8 @@ import PrivateRoute from "./PrivateRoute";
 import { connect } from "react-redux";
 import { useSelector } from 'react-redux';
 import LoaderApp from "./LoaderApp";
+import Docs from "../pages/Docs";
+
 
 const MainApp = () => {
 
@@ -35,6 +37,7 @@ const MainApp = () => {
                             <Switch>
                                 <Route exact path='/' component={Home} />
                                 <PrivateRoute exact path='/dashboard' component={Dashboard} />
+                                <Route exact path='/docs' component={Docs} />
                                 <Route exact path='/register' component={Register} />
                                 <Route exact path='/login' component={Login} />
                                 <Route exact path='/tool' component={Playground} />

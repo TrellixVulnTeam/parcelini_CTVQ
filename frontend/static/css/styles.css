@@ -748,81 +748,31 @@ nav .menu-btn,
   font-weight: bold;
 }
 
-/* #address-bar span > i {
-  color: white;
-}
-#address-bar span > input {
-  background: none;
-  color: white;
-  padding: 0;
-  border: 0;
-} */
+/* API Card  */
 
-/* .container {
-  width: 80%;
-  padding: 10px 0;
-  margin: auto;
-  overflow: hidden;
-  text-align: center;
-}
-
-.search-bar {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 0;
-}
-
-#addr-input-bar {
-  width: 40%;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-#addr-submit-bar {
-  width: 10%;
-  padding-right: 5px;
-  padding-left: 5px;
-} */
-
-/* .collapsible {
-  width: 90%;
+.api-card {
   padding: 20px;
 }
-
-.info-header {
-  padding: 5px 10px;
-  background-color: #83c5cc;
+.api-card-head {
+  font-size: medium;
+}
+.curl-code {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid #000;
 }
 
-.info-content {
-  background-color: #d7f2f5;
-} */
-
-/* .content {
-  cursor: pointer;
-  border-left: solid 1px #f2f2f2;
-  border-right: solid 1px #f2f2f2;
-  border-bottom: solid 1px #f2f2f2;
-  border-radius: 0 0 5px 5px;
-  padding: 15px;
-  font-family: verdana;
-  font-size: 14px;
+#sign-up-btn {
+  height: 40px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  text-align: center;
+  background-color: #00b7ff;
+  box-shadow: 5px 10px 30px rgba(2, 238, 255, 0.336);
+  border-radius: 10px;
+  color: #ffffff;
 }
-
-#info-panel {
-  width: 50%;
-  float: left;
-}
-
-#map-panel {
-  width: 50%;
-  float: right;
-}
-
-
-#canvas-container {
-  padding: 300px;
-  margin: 40px;
-  height: 100%;
-  width: 100%;
-} */

@@ -40,7 +40,7 @@ export class Register extends Component {
 
   render() {
     if (this.props.isAuthenticated) {
-      return <Redirect to="/" />;
+      return <Redirect to="/docs" />;
     }
     const { username, email, password, password2 } = this.state;
     return (
@@ -51,7 +51,7 @@ export class Register extends Component {
         <div className="user-form">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label>Username</label>
+                <label>Username</label><br/>
                 <input
                   type="text"
                   className="form-control"
@@ -61,7 +61,7 @@ export class Register extends Component {
                 />
               </div>
               <div className="form-group">
-                <label>Email</label>
+                <label>Email</label><br/>
                 <input
                   type="email"
                   className="form-control"
@@ -71,7 +71,7 @@ export class Register extends Component {
                 />
               </div>
               <div className="form-group">
-                <label>Password</label>
+                <label>Password</label><br/>
                 <input
                   type="password"
                   className="form-control"
@@ -81,7 +81,7 @@ export class Register extends Component {
                 />
               </div>
               <div className="form-group">
-                <label>Confirm Password</label>
+                <label>Confirm Password</label><br/>
                 <input
                   type="password"
                   className="form-control"

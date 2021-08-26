@@ -8,7 +8,6 @@ import { logout } from '../../actions/auth';
 
 
 
-
 const Navbar = (props) => {
 
     // propTypes = {
@@ -47,9 +46,9 @@ const Navbar = (props) => {
             <ul className='menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/tool'>Tool</Link></li>
+                <li><Link to='/docs'>Docs</Link></li>
                 {isAuthenticated ? 
                     <>
-                        <li><Link to='/dashboard'>Dashboard</Link></li>
                         <li><a onClick={props.logout} >Logout</a></li>
                     </>
                     :
