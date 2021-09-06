@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import Collapsible from './../layout/Collapsible';
 import MapPanel from "./maps/MapPanel";
 import MapColoredSidesPanel from "./maps/MapColoredSidesPanel";
 import MapListGeojson from "./maps/MapListGeojson";
@@ -96,7 +95,7 @@ function InfoPanel({displayInfo, colorCodedSides, backyard, buildingFootprints})
                 <button onClick={displayZoneInfo}>Zoning Info</button>
                 <button onClick={displayOtherInfo}>Property Info</button>
                 {(Object.keys(parcelPolygon).length != 0) ? <button onClick={displayParcelPolygon}>Parcel Polygon</button> : <></>}
-                {(Object.keys(colorCodedSides).length != 0) ? <button onClick={displayColorCodedSides}>Parcel Sides</button> : <></>}
+                {/* {(Object.keys(colorCodedSides).length != 0) ? <button onClick={displayColorCodedSides}>Parcel Sides</button> : <></>} */}
                 {/* {(Object.keys(backyard).length != 0) ? <button onClick={displayBackyard}>Backyard</button> : <></>} */}
                 {/* {(Object.keys(buildingFootprints).length != 0) ? <button onClick={displayBuildingFootprints}>Building Footprints</button> : <></>} */}
                 

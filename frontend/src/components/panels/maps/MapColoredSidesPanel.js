@@ -2,7 +2,7 @@
 import React from "react";
 // import { useState } from "react"
 import { MapContainer, TileLayer, useMap, Polygon, GeoJSON } from 'react-leaflet';
-
+import { useSelector } from "react-redux";
 
 
 const ChangeView = ({ center, zoom }) => {
@@ -14,11 +14,16 @@ const ChangeView = ({ center, zoom }) => {
 
 
 
-const MapColoredSidesPanel = ({geojson, position}) => {
+const MapColoredSidesPanel = ({geojson}) => {
 
     const onEachSide = (side, layer) => {
         layer.setStyle({ color: side.properties.color_code})
+        layer.bindPopup(side.properties.side)
     }
+
+    const lat = useSelector(state => parseFloat(state.parcel_info.basic_info.latitude))
+    const lng = useSelector(state => parseFloat(state.parcel_info.basic_info.longitude))
+    const position = [lat, lng]
 
 
     return (

@@ -55,6 +55,8 @@ class BasicInfo(APIView):
             data['owner'] = all_data['owner']
             data['assessor_id'] = all_data['parcel_id']
             data['school_district'] = all_data['school_district']
+            data['latitude'] = all_data['latitude']
+            data['longitude'] = all_data['longitude']
             return JsonResponse(data)
         else:
             content = {'message': 'Please use a correct California address'}

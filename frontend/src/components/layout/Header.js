@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import JSONDisplay from './JSONDisplay'
 const Header = () => {
     return (
         <div id='main'>

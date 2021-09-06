@@ -31,6 +31,7 @@
     "react-alert-template-basic": "^1.0.2",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.2",
+    "react-json-pretty": "^2.2.0",
     "react-jupyter-notebook": "^0.3.1",
     "react-leaflet": "^3.2.0",
     "react-loader-spinner": "^4.0.0",
