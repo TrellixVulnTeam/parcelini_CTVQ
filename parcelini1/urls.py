@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('models_3d.urls')),
     path('', include('accounts.urls')),
     path('', include('parcels.urls')),
+    path('', include('contacts.urls')),
 ]

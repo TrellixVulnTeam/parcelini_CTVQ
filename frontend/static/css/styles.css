@@ -261,7 +261,7 @@ nav .menu-btn,
 }
 .about-text h2 {
   font-size: 2rem;
-  color: #00b7ff;
+  color: black;
   font-weight: 500;
   margin: 0px;
   padding: 0px;
@@ -468,6 +468,17 @@ nav .menu-btn,
   justify-content: center;
   border-radius: 50px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+}
+.contact-message {
+  width: 400px;
+  height: 100px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.15);
+  margin: 10px;
 }
 .contact-input input {
   width: 100%;
@@ -476,6 +487,17 @@ nav .menu-btn,
   outline: none;
   text-align: center;
   color: #242425;
+  font-family: "Montserrat";
+}
+.contact-message textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: #242425;
+  font-family: "Montserrat";
+  padding-top: 15px;
 }
 .contact-input a {
   width: 200px;
@@ -764,7 +786,7 @@ nav .menu-btn,
 }
 
 #sign-up-btn {
-  height: 40px;
+  height: auto;
   padding: 10px;
   display: block;
   margin-left: auto;
@@ -775,4 +797,12 @@ nav .menu-btn,
   box-shadow: 5px 10px 30px rgba(2, 238, 255, 0.336);
   border-radius: 10px;
   color: #ffffff;
+}
+
+.custom-json-pretty {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }

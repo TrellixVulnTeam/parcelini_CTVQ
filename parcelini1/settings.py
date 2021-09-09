@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["defineapoorv.pythonanywhere.com",
                  "127.0.0.1", "www.parcelini.com", "parcelini.com"]
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "knox",
     "rest_framework_api_key",
     "accounts",
+    "contacts",
 ]
 
 MIDDLEWARE = [

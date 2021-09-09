@@ -32,7 +32,12 @@ const DisplayPanel = () => {
             }
             
             <button onClick={() => {setRole('hazard_analysis')}}>Hazard Analysis</button>
-            <button onClick={() => {setRole('parcel_sides')}}>Parcel Sides</button>
+            { (Object.keys(parcel_sides).length === 0 && parcel_sides.constructor === Object) ? 
+                <></>
+            :   <button onClick={() => {setRole('parcel_sides')}}>Parcel Sides</button>
+
+            }
+            
             </div>
             <div id='displaybox'>
                 <DisplayBox role={role}/>
