@@ -52,7 +52,7 @@ const Navbar = (props) => {
                         <li><a onClick={props.logout} >Logout</a></li>
                     </>
                     :
-                    <li><Link to='/register'>Sign-Up</Link></li>
+                    <li><Link to='/register'>SignUp</Link></li>
                 }
             </ul>
         </nav>

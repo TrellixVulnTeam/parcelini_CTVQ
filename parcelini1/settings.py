@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "rest_framework_api_key",
     "accounts",
     "contacts",
+    "visits"
 ]
 
 MIDDLEWARE = [
