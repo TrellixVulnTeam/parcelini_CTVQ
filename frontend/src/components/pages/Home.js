@@ -18,26 +18,27 @@ import Feature from '../layout/Feature';
 const Home = () => {
 
     const geometry_api_sample = {
+        "parcel_polygon" : '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.10071254,37.6602567],...........[-122.10078658859,37.660453906098]]]]}',
+        "number_of_buildings": 2,
         "building_polygons" : [
             {
                 "type": "primary",
                 "area": 12.34,
-                "geometry": '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.1007,37.660],...........[-122.10078658859,37.660453906098]]]]}',
+                "height": 16,
+                "geometry": '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.10172365,37.6504123],...........[-122.100757749,37.66045077]]]]}',
             },
             {
                 "type": "accessory",
                 "area": 8.64,
-                "geometry": '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.1007,37.660],...........[-122.10078658859,37.660453906098]]]]}',
+                "height": 12,
+                "geometry": '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.10075541,37.65042312],...........[-122.10078652244,37.660453977234]]]]}',
             }
         ],
-        "parcel_polygon" : '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.1007,37.660],...........[-122.10078658859,37.660453906098]]]]}',
-        "number_of_buildings": 2,
         "pool_present" : true,
         "pool_polygon" : [
             {
-                "type": "primary",
                 "area": 4.64,
-                "geometry": '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.1007,37.660],...........[-122.10078658859,37.660453906098]]]]}',
+                "geometry": '{\"type\":\"MultiPolygon\",\"coordinates\":[[[[-122.100774532,37.6602334],...........[-122.10078655812,37.6604539025672]]]]}',
             }
         ]
     }
