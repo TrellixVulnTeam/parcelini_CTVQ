@@ -4,6 +4,8 @@ import JsonPrettyPrint from '../layout/JsonPrettyPrint';
 import JSONPretty from 'react-json-pretty';
 import MapPanel from './maps/MapPanel';
 import MapColoredSidesPanel from './maps/MapColoredSidesPanel';
+import Loader from "react-loader-spinner";
+
 
 const DisplayBox = ({role}) => {
 
@@ -16,11 +18,30 @@ const DisplayBox = ({role}) => {
         parcel_sides
     } = useSelector(state => state.parcel_info)
 
+    const {model_loaded, gisparcel_id} = useSelector(state => state.three)
+
     switch(role) {
         case 'basic':
             return <div className='info-content'>
                 <JSONPretty id="json-pretty" data={basic_info}/>
             </div>
+        case '3d':
+            return (
+                <div className='info-content'>
+                    { model_loaded ? 
+                        <a href={`/view_model/${gisparcel_id}`} target="_blank"> Check Property </a>
+                    :
+                    <div className='loader'>
+                    <Loader
+                    type="Bars"
+                    color="#00b7ff"
+                    height={50}
+                    width={50}/>
+                    </div>
+                    }
+                </div>
+            )
+                
         case 'zoning':
             return <div className='info-content'>
                 <JsonPrettyPrint data={zoning_info}/>

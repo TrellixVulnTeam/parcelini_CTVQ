@@ -7,6 +7,8 @@ import Alerts from "../layout/Alerts";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
+import Three from "../three/Three";
+import Solar from "../three/Solar";
 import PrivateRoute from "./PrivateRoute";
 import { connect } from "react-redux";
 import { useSelector } from 'react-redux';
@@ -41,6 +43,8 @@ const MainApp = () => {
                                 <Route exact path='/register' component={Register} />
                                 <Route exact path='/login' component={Login} />
                                 <Route exact path='/tool' component={Playground} />
+                                <Route exact path='/three' component={Three} />
+                                <Route exact path='/solar' component={Solar} />
                             </Switch>
                         </Fragment>
                     </Router>
