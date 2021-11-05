@@ -46,14 +46,14 @@ const Navbar = (props) => {
             <ul className='menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/tool'>Tool</Link></li>
-                <li><Link to='/docs'>Docs</Link></li>
-                {isAuthenticated ? 
+                {/* <li><Link to='/docs'>Docs</Link></li> */}
+                {/* {isAuthenticated ? 
                     <>
                         <li><a onClick={props.logout} >Logout</a></li>
                     </>
                     :
                     <li><Link to='/register'>SignUp</Link></li>
-                }
+                } */}
             </ul>
         </nav>
     )

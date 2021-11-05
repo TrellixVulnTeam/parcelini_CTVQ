@@ -20,3 +20,5 @@ export const REGISTER_FAIL = "REGISTER_FAIL";
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const FETCH_3D_MODEL = "FETCH_3D_MODEL";
 export const SET_GISPARCEL_ID = "SET_GISPARCEL_ID";
+export const SET_STATUS = "SET_STATUS";
+export const AREA_NA_3D = "AREA_NA_3D";

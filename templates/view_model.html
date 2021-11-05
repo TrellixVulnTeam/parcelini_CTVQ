@@ -19,7 +19,10 @@
 
 
 <body>
-    <div id="container"></div>
+    <div id="message"></div>
+    <div id="container-box"></div>
+    
+    
 
 <script type="module">
     import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/build/three.module.js';
@@ -27,6 +30,8 @@
 
     let gisparcel_id = "{{ gisparcel_id }}"
     console.log(gisparcel_id)
+
+    document.getElementById('message').innerHTML = 'Fetching 3D model of the property. This will take less than 2 minutes.'
 
     axios.get('/models/fetch_model_data/'.concat(gisparcel_id))
         .then(function (response) { 
@@ -42,8 +47,10 @@
         init();
         animate();
 
+        document.getElementById('message').innerHTML = 'Rendering 3D model of the property. This will take a few seconds.'
+
         function init() {
-            container = document.getElementById( 'container' );
+            container = document.getElementById( 'container-box' );
             camera = new THREE.PerspectiveCamera( 27, window.innerWidth / window.innerHeight, 5, 3500 );
             camera.position.z = 2750;
             scene = new THREE.Scene();
@@ -135,6 +142,8 @@
 
                 // points.rotation.x = time * 0.25;
                 // points.rotation.y = time * 0.5;
+
+                document.getElementById('message').innerHTML = 'Rendered'
 
                 renderer.render( scene, camera );
 

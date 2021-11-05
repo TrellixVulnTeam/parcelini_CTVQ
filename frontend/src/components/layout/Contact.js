@@ -11,14 +11,14 @@ const Contact = () => {
 
     return (
         <div id='contact'>
-            <h3>Any Questions? We're always available. Reach out!</h3>
-            <div className='contact-message'>
+            <h3>Mail us at info@parcelini.com</h3>
+            {/* <div className='contact-message'>
                 <textarea type='text' placeholder='Your Message' onChange={(e) => setMessage(e.target.value)}/>
             </div>
             <div className='contact-input'>
                 <input type='email' placeholder='Your Email' onChange={(e) => setEmail(e.target.value)}/>
                 <a onClick={(e) => dispatch(establishContact(message, email))}>Send</a>
-            </div>
+            </div> */}
         </div>
     )
 }

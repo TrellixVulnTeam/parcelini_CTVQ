@@ -13,7 +13,7 @@ import ast
 import time
 
 url_prod = 'http://docke-loadb-xtssv7ml5qiq-424f3041ccea48d9.elb.us-east-1.amazonaws.com:5001'
-url_local = 'http://localhost:5001'
+# url_prod = 'http://localhost:5001'
 
 
 def models(request):

@@ -18,7 +18,7 @@ const DisplayBox = ({role}) => {
         parcel_sides
     } = useSelector(state => state.parcel_info)
 
-    const {model_loaded, gisparcel_id} = useSelector(state => state.three)
+    const {model_loaded, gisparcel_id, area_na} = useSelector(state => state.three)
 
     switch(role) {
         case 'basic':
@@ -29,9 +29,13 @@ const DisplayBox = ({role}) => {
             return (
                 <div className='info-content'>
                     { model_loaded ? 
-                        <a href={`/view_model/${gisparcel_id}`} target="_blank"> Check Property </a>
+                        <a href={`/view_model/${gisparcel_id}`} target="_blank"> View 3D model of the property </a>
+                    :
+                    area_na ?
+                      <>3D model not available for this area. Please try another address.</>
                     :
                     <div className='loader'>
+                    <p>Checking Availability of 3D model in this area</p>
                     <Loader
                     type="Bars"
                     color="#00b7ff"
