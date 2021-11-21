@@ -23,7 +23,7 @@ const DisplayPanel = () => {
         <div id='panel'>
             <div id='infotypes'>
             {/* <button onClick={() => {setRole('basic')}}>Basic Info</button> */}
-            <button onClick={() => {setRole('3d')}}>3D Model</button>
+            {/* <button onClick={() => {setRole('3d')}}>3D Model</button> */}
             <button onClick={() => {setRole('zoning')}}>Zoning Info</button>
             <button onClick={() => {setRole('parcel_polygon')}}>Parcel Polygon</button>
             { (Object.keys(backyard_polygon).length === 0 && backyard_polygon.constructor === Object) ? 

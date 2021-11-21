@@ -13,7 +13,7 @@ const SearchBar = ({search_type}) => {
     const mainAction = address => {
     return dispatch => {
         dispatch(getBasicInfo(address))
-        dispatch(fetch3dModel(address))
+        // dispatch(fetch3dModel(address))
       }
     }
 
