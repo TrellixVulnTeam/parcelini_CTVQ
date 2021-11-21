@@ -15,6 +15,7 @@ const Navbar = (props) => {
     // }
     
     const [nav, setNav] = useState(false)
+    const [showMenu, setShowMenu] = useState(true)
 
     const changeBackround = () => {
         if(window.scrollY >= 50) {
@@ -25,7 +26,18 @@ const Navbar = (props) => {
         }
     }
 
+    const resizeWindow = () => {
+        if(window.innerWidth >= 600){
+            setShowMenu(true)
+        }
+        if(window.innerWidth < 480){
+            setShowMenu(false)
+        }
+    }
+
     window.addEventListener('scroll', changeBackround)
+    window.addEventListener('resize', resizeWindow)
+
 
     const { isAuthenticated, user } = useSelector(state => state.auth)
     // const dispatch = useDispatch();
@@ -40,20 +52,27 @@ const Navbar = (props) => {
                 <img src={logo} alt=''/>
             </Link>
             {/* <input type='checkbox' className='menu-btn' id='menu-btn'/> */}
-            <label className='menu-icon'>
+            <label className='menu-icon' onClick={(e) => setShowMenu(!showMenu)}>
                 <span className='nav-icon'></span>
             </label>
             <ul className='menu'>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/tool'>Tool</Link></li>
-                {/* <li><Link to='/docs'>Docs</Link></li> */}
-                {/* {isAuthenticated ? 
+                {showMenu ? 
                     <>
-                        <li><a onClick={props.logout} >Logout</a></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/tool'>Tool</Link></li>
+                    {/* <li><Link to='/docs'>Docs</Link></li> */}
+                    {/* {isAuthenticated ? 
+                        <>
+                            <li><a onClick={props.logout} >Logout</a></li>
+                        </>
+                        :
+                        <li><Link to='/register'>SignUp</Link></li>
+                    } */}
                     </>
                     :
-                    <li><Link to='/register'>SignUp</Link></li>
-                } */}
+                    <></>
+                }
+                
             </ul>
         </nav>
     )
