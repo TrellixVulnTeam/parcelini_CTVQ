@@ -61,13 +61,13 @@ const Navbar = (props) => {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/tool'>Tool</Link></li>
                     {/* <li><Link to='/docs'>Docs</Link></li> */}
-                    {/* {isAuthenticated ? 
+                    {isAuthenticated ? 
                         <>
                             <li><a onClick={props.logout} >Logout</a></li>
                         </>
                         :
                         <li><Link to='/register'>SignUp</Link></li>
-                    } */}
+                    }
                     </>
                     :
                     <></>
