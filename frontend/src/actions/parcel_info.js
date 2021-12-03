@@ -26,7 +26,7 @@ export const getBasicInfo = (address) => dispatch => {
             'Content-Type': 'application/json'
         }
     }
-    config.headers['Authorization'] = 'Api-Key IkoP9g2r.DgFLr6CdVhM4uGtukRWxVH4ysDXPQ5UH'
+    config.headers['Authorization'] = 'Api-Key vmO5vO2k.kDtCAygQa0S9Leg6UnqcdDeNRZ8CUIeH'
 
     axios.get(`/api/get_basic_info/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
