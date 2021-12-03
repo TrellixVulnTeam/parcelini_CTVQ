@@ -105,8 +105,7 @@ DATABASES = {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         "ENGINE": "django.contrib.gis.db.backends.postgis",
         # Or path to database file if using sqlite3.
-        # "NAME": os.environ["DB_NAME"],
-        "NAME": "backend",
+        "NAME": os.environ["DB_NAME"],
         "USER": os.environ["DB_USER"],
         "PASSWORD": os.environ["PASSWORD"],
         # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.

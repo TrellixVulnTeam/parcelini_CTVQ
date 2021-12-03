@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { getBasicInfo } from '../../actions/parcel_info';
 import { fetch3dModel } from "../../actions/three";
 import { useDispatch, useSelector } from 'react-redux';
+import Autocomplete from "react-google-autocomplete";
 
 const SearchBar = ({search_type}) => {
 
@@ -23,6 +24,12 @@ const SearchBar = ({search_type}) => {
         <div>
             <div id='address-bar'>
                 <h3>Type any address in California</h3>
+                {/* <Autocomplete
+                    apiKey={'AIzaSyA9Pbdvi0ZytU-uuyBHy7alZ_g4JV__J-A'}
+                    onPlaceSelected={(place) => {
+                        dispatch(mainAction(place));
+                    }}
+                /> */}
                 <input type='text' value={address} onChange={(e) => setAddress(e.target.value)}/>
                 {
                     search_type === 'general' 
