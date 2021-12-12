@@ -24,7 +24,11 @@
 
 `conda env config vars set my_var=value`
 
-6. Launch the server
+6. Run migrations
+
+`python manage.py migrate`
+
+7. Launch the server
 
 `python manage.py runserver --insecure`
 
