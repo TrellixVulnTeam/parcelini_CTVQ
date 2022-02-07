@@ -93,20 +93,20 @@ const Home = () => {
             <Header/>
             {/* <Feature/> */}
             <About
-                image={image_geometry} 
-                title='Geometry APIs' 
-                // button='See how we do it'
-                data={geometry_api_sample}
+                // image={image_geometry} 
+                // title='Geometry APIs' 
+                // // button='See how we do it'
+                // data={geometry_api_sample}
             />
             <About
-                image={image_zoning} 
-                title='Zoning API' 
-                data={zoning_api_sample}
+                // image={image_zoning} 
+                // title='Zoning API' 
+                // data={zoning_api_sample}
             />
             <About 
-                image={image_hazard} 
-                title='Hazards APIs' 
-                data={hazard_api_sample}
+                // image={image_hazard} 
+                // title='Hazards APIs' 
+                // data={hazard_api_sample}
             />
             {/* <Presentation/> */}
             <Contact/>

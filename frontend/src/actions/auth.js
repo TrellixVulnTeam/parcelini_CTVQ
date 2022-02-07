@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig, AxiosPromise, AxiosResponse } from "axios";
 import { createMessage, returnErrors } from "./messages";
 
 import { USER_LOADED, USER_LOADING, AUTH_ERROR, GET_ERRORS, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, REGISTER_FAIL, REGISTER_SUCCESS } from "./types";

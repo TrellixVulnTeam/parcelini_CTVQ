@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+{% block content %}
+	{% for data in data_list %}
+     <div class="container">
+     	<ul>
+			<li><a href="#">{{ data.county }}</a>
+		        <a href="#">{{ data.cities }}</a>
+			</li>
+	 	<ul>
+	 </div>
+	{% endfor %}
+{% endblock %}

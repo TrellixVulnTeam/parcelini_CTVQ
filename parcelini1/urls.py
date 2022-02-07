@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('frontend.urls')),
@@ -23,4 +24,6 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('parcels.urls')),
     path('', include('contacts.urls')),
+    path('', include('arcgis.urls')),
+    path('', include('explore_data.urls')),
 ]
