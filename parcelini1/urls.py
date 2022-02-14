@@ -26,4 +26,5 @@ urlpatterns = [
     path('', include('contacts.urls')),
     path('', include('arcgis.urls')),
     path('', include('explore_data.urls')),
+    path('', include('geolocation.urls')),
 ]

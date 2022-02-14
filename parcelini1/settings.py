@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "visits",
     "arcgis",
     "explore_data",
+    "geolocation",
 ]
 
 MIDDLEWARE = [
