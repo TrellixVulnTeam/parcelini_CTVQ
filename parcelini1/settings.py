@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     "accounts",
     "contacts",
     "visits",
-    "arcgis",
     "explore_data",
     "geolocation",
     "blog",
