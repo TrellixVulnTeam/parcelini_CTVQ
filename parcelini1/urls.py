@@ -24,7 +24,4 @@ urlpatterns = [
     path('', include('accounts.urls')),
     path('', include('parcels.urls')),
     path('', include('contacts.urls')),
-    path('', include('explore_data.urls')),
-    path('', include('geolocation.urls')),
-    path('', include('blog.urls')),
 ]

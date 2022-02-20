@@ -55,9 +55,6 @@ INSTALLED_APPS = [
     "accounts",
     "contacts",
     "visits",
-    "explore_data",
-    "geolocation",
-    "blog",
 ]
 
 MIDDLEWARE = [
