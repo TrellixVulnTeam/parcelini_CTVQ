@@ -94,18 +94,18 @@ const Home = () => {
             {/* <Feature/> */}
             <About
                 image={image_geometry} 
-                title='Geometry APIs' 
+                title='Geometry Data' 
                 // button='See how we do it'
                 data={geometry_api_sample}
             />
             <About
                 image={image_zoning} 
-                title='Zoning API' 
+                title='Zoning Data' 
                 data={zoning_api_sample}
             />
             <About 
                 image={image_hazard} 
-                title='Hazards APIs' 
+                title='Hazards Analysis' 
                 data={hazard_api_sample}
             />
             {/* <Presentation/> */}
