@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.views import APIView
 from django.http import JsonResponse
-import pymongo 
+# import pymongo 
 # from .models import Explore
 
 def test(request):
