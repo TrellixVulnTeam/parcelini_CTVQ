@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path("api/get_seisimic_info/<str:address_slug>", views.SeisimicInfo.as_view()),
+    path("api/get_seismic_info/<str:address_slug>", views.SeisimicInfo.as_view()),
     path("api/get_hillside_slope/<str:address_slug>", views.HillsideInfo.as_view()),
     # path(
     #     "api/get_mb_building_footprints/<str:address_slug>",
