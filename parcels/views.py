@@ -17,7 +17,8 @@ import requests
 from accounts.permissions import HasUserAPIKey
 from rest_framework import status
 from django.contrib.auth.models import User
-from accounts.models import UserHistory
+
+# from accounts.models import UserHistory
 
 
 class ParcelInfo(APIView):
