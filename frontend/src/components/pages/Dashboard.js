@@ -6,12 +6,16 @@ import Navbar from '../layout/Navbar';
 
 function Dashboard(props) {
 
-    // const { key } = useSelector(state => state.key)
+    const username = useSelector(state => state.auth.user.username)
+
 
     return (
         <div>
             <div id='nav-header'>
                 <Navbar/> 
+            </div>
+            <div className='general-text'>
+                { username } Dashboard
             </div>
             {/* <div className='secret-key'>
                 <span>Secret Key: </span> { (props.auth.key !== undefined) ? <span className='access-key'> {props.auth.key} </span> : <></>}

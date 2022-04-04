@@ -1,8 +1,8 @@
-
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
 from rest_framework_api_key.models import AbstractAPIKey
+
 
 class UserAPIKey(AbstractAPIKey):
     user = models.ForeignKey(
@@ -19,3 +19,12 @@ class UserSecretKey(models.Model):
         on_delete=models.CASCADE,
         related_name="api_keys",
     )
+
+
+class UserHistory(models.Model):
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+    )
+    api_name = models.CharField(max_length=100)
+    address = models.CharField(max_length=200)

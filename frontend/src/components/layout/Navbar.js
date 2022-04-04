@@ -63,6 +63,7 @@ const Navbar = (props) => {
                     {/* <li><Link to='/docs'>Docs</Link></li> */}
                     {isAuthenticated ? 
                         <>
+                            <li><Link to='/dashboard'>Dashboard</Link></li>
                             <li><a onClick={props.logout} >Logout</a></li>
                         </>
                         :
