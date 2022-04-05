@@ -19,6 +19,9 @@ from rest_framework import status
 from django.contrib.auth.models import User
 
 # from accounts.models import UserHistory
+from django.apps import apps
+
+UserHistory = apps.get_model("accounts", "UserHistory")
 
 
 class ParcelInfo(APIView):

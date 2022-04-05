@@ -8,6 +8,9 @@ from django.contrib.auth.models import User
 
 # from accounts.models import UserHistory
 
+from django.apps import apps
+
+UserHistory = apps.get_model("accounts", "UserHistory")
 # from geolocation.building_footprints import get_building_footprints
 from geolocation.addressing import get_slope_of_property
 from rest_framework.response import Response
