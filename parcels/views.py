@@ -18,7 +18,7 @@ from accounts.permissions import HasUserAPIKey
 from rest_framework import status
 from django.contrib.auth.models import User
 
-# from accounts.models import UserHistory
+
 from django.apps import apps
 
 UserHistory = apps.get_model("accounts", "UserHistory")
@@ -76,7 +76,7 @@ class BasicInfo(APIView):
 
 class ZoningInfo(APIView):
     def get(self, request, address_slug, username):
-        api_name = "ZONING_OLD"
+        api_name = "ZONING"
         address = address_slug.replace("+", " ")
         try:
             user = User.objects.get(username=username)
@@ -87,11 +87,10 @@ class ZoningInfo(APIView):
             params={"address": address},
         )
 
-        b = UserHistory(user=user, api_name=api_name, address=address)
-        b.save()
-
         if r.status_code == 200:
             all_data = r.json()["zoning_details"]
+            b = UserHistory(user=user, api_name=api_name, address=address)
+            b.save()
             return JsonResponse(all_data)
         else:
             content = {"message": "Please use a correct California address"}
@@ -101,12 +100,19 @@ class ZoningInfo(APIView):
 class ParcelPolygon(APIView):
     def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
+        api_name = "PARCEL_POLYGON"
+        try:
+            user = User.objects.get(username=username)
+        except:
+            return Response("User does not exist")
         r = requests.post(
             "https://protected-peak-85531.herokuapp.com/parcel_info",
             params={"address": address},
         )
         if r.status_code == 200:
             all_data = json.loads(r.json()["polygon_details"]["st_asgeojson"])
+            b = UserHistory(user=user, api_name=api_name, address=address)
+            b.save()
             return JsonResponse(all_data)
         else:
             content = {"message": "Please use a correct California address"}
@@ -115,13 +121,21 @@ class ParcelPolygon(APIView):
 
 class BackyardPolygon(APIView):
     def get(self, request, address_slug, username):
+        # address = address_slug.replace("+", " ")
+        api_name = "BACKYARD_POLYGON"
         address = address_slug.replace("+", " ")
+        try:
+            user = User.objects.get(username=username)
+        except:
+            return Response("User does not exist")
         r = requests.post(
             "https://protected-peak-85531.herokuapp.com/get_backyard_polygon",
             params={"address": address},
         )
         if r.status_code == 200:
             all_data = r.json()
+            b = UserHistory(user=user, api_name=api_name, address=address)
+            b.save()
             return JsonResponse(all_data)
         else:
             content = {"message": "Please use a correct California address"}
@@ -129,14 +143,24 @@ class BackyardPolygon(APIView):
 
 
 class HazardAnalysis(APIView):
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
+        # address = address_slug.replace("+", " ")
+
+        api_name = "HAZARD_ANALYSIS"
         address = address_slug.replace("+", " ")
+        try:
+            user = User.objects.get(username=username)
+        except:
+            return Response("User does not exist")
+
         r = requests.get(
             "https://protected-peak-85531.herokuapp.com/get_all_hazard_info",
             params={"address": address},
         )
         if r.status_code == 200:
             all_data = r.json()
+            b = UserHistory(user=user, api_name=api_name, address=address)
+            b.save()
             return JsonResponse(all_data)
         else:
             content = {"message": "Please use a correct California address"}
@@ -144,9 +168,9 @@ class HazardAnalysis(APIView):
 
 
 class FrontStreet(APIView):
-    permission_classes = [HasUserAPIKey]
+    # permission_classes = [HasUserAPIKey]
 
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
         r = requests.post(
             "https://protected-peak-85531.herokuapp.com/get_front_street",
@@ -164,9 +188,9 @@ class FrontStreet(APIView):
 
 
 class IsAtCulDeSac(APIView):
-    permission_classes = [HasUserAPIKey]
+    # permission_classes = [HasUserAPIKey]
 
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
         r = requests.get(
             "https://protected-peak-85531.herokuapp.com/is_at_cul_de_sac",
@@ -182,9 +206,9 @@ class IsAtCulDeSac(APIView):
 
 
 class BackStreetOrAlleyPresent(APIView):
-    permission_classes = [HasUserAPIKey]
+    # permission_classes = [HasUserAPIKey]
 
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
         r = requests.get(
             "https://protected-peak-85531.herokuapp.com/back_road_or_alley_present",
@@ -199,9 +223,9 @@ class BackStreetOrAlleyPresent(APIView):
 
 
 class IsCornerLot(APIView):
-    permission_classes = [HasUserAPIKey]
+    # permission_classes = [HasUserAPIKey]
 
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
         r = requests.get(
             "https://protected-peak-85531.herokuapp.com/is_corner_lot",
@@ -216,9 +240,9 @@ class IsCornerLot(APIView):
 
 
 class IsReversedCornerLot(APIView):
-    permission_classes = [HasUserAPIKey]
+    # permission_classes = [HasUserAPIKey]
 
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
         r = requests.get(
             "https://protected-peak-85531.herokuapp.com/is_reversed_corner_lot",
