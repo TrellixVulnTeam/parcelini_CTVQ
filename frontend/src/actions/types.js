@@ -22,3 +22,5 @@ export const FETCH_3D_MODEL = "FETCH_3D_MODEL";
 export const SET_GISPARCEL_ID = "SET_GISPARCEL_ID";
 export const SET_STATUS = "SET_STATUS";
 export const AREA_NA_3D = "AREA_NA_3D";
+export const USER_HISTORY = "USER_HISTORY";
+export const USER_USED_ADDRESSES = "USER_USED_ADDRESSES";

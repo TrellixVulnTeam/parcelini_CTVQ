@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosPromise, AxiosResponse } from "axios";
 import { createMessage, returnErrors } from "./messages";
 
-import { USER_LOADED, USER_LOADING, AUTH_ERROR, GET_ERRORS, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, REGISTER_FAIL, REGISTER_SUCCESS } from "./types";
+import { USER_LOADED, USER_LOADING, AUTH_ERROR, GET_ERRORS, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT_SUCCESS, REGISTER_FAIL, REGISTER_SUCCESS, USER_HISTORY, USER_USED_ADDRESSES } from "./types";
 
 
 // CHECK token, load user
@@ -18,6 +18,28 @@ export const loadUser = () => (dispatch, getState) => {
             dispatch(returnErrors(err.response.data, err.response.status))
             dispatch({
                 type: AUTH_ERROR
+            })
+        })
+
+}
+
+
+export const getHistory = (username) => dispatch => {
+    axios.get(`/api/${username}/usage`)
+        .then(res => {
+            dispatch({
+                type: USER_HISTORY,
+                payload: res.data
+            })
+        })
+}
+
+export const getUserUsedAddresses = (username) => dispatch => {
+    axios.get(`/api/${username}/user_addresses`)
+        .then(res => {
+            dispatch({
+                type: USER_USED_ADDRESSES,
+                payload: res.data
             })
         })
 }
