@@ -92,7 +92,7 @@ const Home = () => {
         <div>
             <Header/>
             {/* <Feature/> */}
-            {/* <About
+            <About
                 image={image_geometry} 
                 title='Geometry Data' 
                 // button='See how we do it'
@@ -107,7 +107,7 @@ const Home = () => {
                 image={image_hazard} 
                 title='Hazards Analysis' 
                 data={hazard_api_sample}
-            /> */}
+            />
             {/* <Presentation/> */}
             <Contact/>
         </div>
