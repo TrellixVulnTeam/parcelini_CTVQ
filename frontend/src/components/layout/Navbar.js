@@ -59,10 +59,11 @@ const Navbar = (props) => {
                 {showMenu ? 
                     <>
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/tool'>Tool</Link></li>
+                    
                     {/* <li><Link to='/docs'>Docs</Link></li> */}
                     {isAuthenticated ? 
                         <>
+                            <li><Link to='/tool'>Tool</Link></li>
                             <li><Link to='/dashboard'>Dashboard</Link></li>
                             <li><a onClick={props.logout} >Logout</a></li>
                         </>

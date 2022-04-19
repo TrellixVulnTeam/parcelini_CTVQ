@@ -42,7 +42,7 @@ const MainApp = () => {
                                 <Route exact path='/docs' component={Docs} />
                                 <Route exact path='/register' component={Register} />
                                 <Route exact path='/login' component={Login} />
-                                <Route exact path='/tool' component={Playground} />
+                                <PrivateRoute exact path='/tool' component={Playground} />
                                 <Route exact path='/three' component={Three} />
                                 <Route exact path='/solar' component={Solar} />
                             </Switch>
