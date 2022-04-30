@@ -22,15 +22,10 @@ const Addresses = () => {
             <th>
                 Address
             </th>
-            <th>
-                Price
-            </th>
             {user_used_addresses.map(data => (
                 <tr>
                     <td>{data.address}</td>
                 </tr>
-                
-                
             ))}
         </table>
     )

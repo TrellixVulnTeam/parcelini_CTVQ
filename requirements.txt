@@ -64,6 +64,7 @@ six==1.16.0
 snuggs==1.4.7
 soupsieve==2.2.1
 sqlparse==0.4.1
+stripe==2.73.0
 tifffile==2022.2.9
 typing-extensions==3.10.0.2
 urllib3==1.26.6

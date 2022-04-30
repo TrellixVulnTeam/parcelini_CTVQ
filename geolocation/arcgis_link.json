@@ -1,0 +1,14 @@
+{
+    "california": {
+        "los angeles": {
+            "zoning": "https://maps.lacity.org/lahub/rest/services/City_Planning_Department/MapServer/8/query"
+        },
+        "san diego": {
+            "zoning":""
+        },
+        "san jose": {
+            "zoning": ""
+        },
+        ""
+    }
+}
