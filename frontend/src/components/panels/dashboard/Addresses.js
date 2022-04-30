@@ -28,7 +28,6 @@ const Addresses = () => {
             {user_used_addresses.map(data => (
                 <tr>
                     <td>{data.address}</td>
-                    <td>$2</td>
                 </tr>
                 
                 
