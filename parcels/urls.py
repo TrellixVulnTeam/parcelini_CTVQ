@@ -3,7 +3,10 @@ from . import views
 
 urlpatterns = [
     path("api/get_parcel_info/<str:address_slug>", views.ParcelInfo.as_view()),
-    path("api/get_basic_info/<str:address_slug>", views.BasicInfo.as_view()),
+    path(
+        "api/<str:username>/get_basic_info/<str:address_slug>",
+        views.BasicInfo.as_view(),
+    ),
     path(
         "api/<str:username>/get_zoning_info/<str:address_slug>",
         views.ZoningInfo.as_view(),

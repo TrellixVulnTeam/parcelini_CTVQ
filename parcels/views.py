@@ -43,7 +43,7 @@ class ParcelInfo(APIView):
 class BasicInfo(APIView):
     permission_classes = [HasUserAPIKey]
 
-    def get(self, request, address_slug):
+    def get(self, request, address_slug, username):
         address = address_slug.replace("+", " ")
         r = requests.post(
             "https://protected-peak-85531.herokuapp.com/parcel_info",

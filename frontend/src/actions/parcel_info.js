@@ -12,7 +12,7 @@ import {
     HIDE_LOADER
 } from "./types";
 
-export const getBasicInfo = (address) => dispatch => {
+export const getBasicInfo = (address, username) => dispatch => {
 
     console.log(address);
 
@@ -28,7 +28,7 @@ export const getBasicInfo = (address) => dispatch => {
     }
     config.headers['Authorization'] = 'Api-Key IFRktHYL.8DPnj1ylzUWnihXfwu2CDc2BkCRdu5dp'
 
-    axios.get(`/api/get_basic_info/${address.replaceAll(' ', '+')}`, config)
+    axios.get(`/api/${username}/get_basic_info/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
           dispatch({
               type: GET_BASIC_INFO,
@@ -52,7 +52,7 @@ export const getBasicInfo = (address) => dispatch => {
       });
 
 
-      axios.get(`/api/get_zoning_info/${address.replaceAll(' ', '+')}`, config)
+      axios.get(`/api/${username}/get_zoning_info/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
           dispatch({
               type: GET_ZONING_INFO,
@@ -73,7 +73,7 @@ export const getBasicInfo = (address) => dispatch => {
       });
 
 
-      axios.get(`/api/get_parcel_polygon/${address.replaceAll(' ', '+')}`, config)
+      axios.get(`/api/${username}/get_parcel_polygon/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
           dispatch({
               type: GET_PARCEL_POLYGON,
@@ -93,7 +93,7 @@ export const getBasicInfo = (address) => dispatch => {
           // })
       });
 
-      axios.get(`/api/get_backyard_polygon/${address.replaceAll(' ', '+')}`, config)
+      axios.get(`/api/${username}/get_backyard_polygon/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
           dispatch({
               type: GET_BACKYARD_POLYGON,
@@ -114,7 +114,7 @@ export const getBasicInfo = (address) => dispatch => {
       });
 
 
-      axios.get(`/api/get_hazard_analysis/${address.replaceAll(' ', '+')}`, config)
+      axios.get(`/api/${username}/get_hazard_analysis/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
           dispatch({
               type: GET_HAZARD_ANALYSIS,
@@ -135,7 +135,7 @@ export const getBasicInfo = (address) => dispatch => {
       });
 
 
-      axios.get(`/api/get_parcel_sides/${address.replaceAll(' ', '+')}`, config)
+      axios.get(`/api/${username}/get_parcel_sides/${address.replaceAll(' ', '+')}`, config)
       .then(res => {
           dispatch({
               type: GET_PARCEL_SIDES,

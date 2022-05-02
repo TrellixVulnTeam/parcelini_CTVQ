@@ -9,11 +9,12 @@ const SearchBar = ({search_type}) => {
 
     const dispatch = useDispatch();
     const [address, setAddress] = useState('');
+    const username = useSelector(state => state.auth.user.username)
 
 
-    const mainAction = address => {
+    const mainAction = (address, username) => {
     return dispatch => {
-        dispatch(getBasicInfo(address))
+        dispatch(getBasicInfo(address, username))
         // dispatch(fetch3dModel(address))
       }
     }
@@ -34,10 +35,10 @@ const SearchBar = ({search_type}) => {
                 {
                     search_type === 'general' 
                     ? 
-                    <button className="btn" onClick={(e) => dispatch(getBasicInfo(address))}><i className="fa fa-search"></i></button> 
+                    <button className="btn" onClick={(e) => dispatch(getBasicInfo(address, username))}><i className="fa fa-search"></i></button> 
                     :
                     <>
-                    <button className="btn" onClick={(e) => dispatch(mainAction(address))}><i className="fa fa-search"></i></button> 
+                    <button className="btn" onClick={(e) => dispatch(mainAction(address, username))}><i className="fa fa-search"></i></button> 
                     </>
                 }
                 
