@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "contacts",
     "visits",
     "geolocation",
+    "data",
 ]
 
 MIDDLEWARE = [

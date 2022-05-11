@@ -9,7 +9,14 @@ const SearchBar = ({search_type}) => {
 
     const dispatch = useDispatch();
     const [address, setAddress] = useState('');
-    const username = useSelector(state => state.auth.user.username)
+
+    
+
+
+    // const user = useSelector(state => state.auth.user)
+
+    const username = 'test1';
+
 
 
     const mainAction = (address, username) => {

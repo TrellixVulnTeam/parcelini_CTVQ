@@ -59,6 +59,7 @@ const Navbar = (props) => {
                 {showMenu ? 
                     <>
                     <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/tool'>Tool</Link></li>
                     
                     {/* <li><Link to='/docs'>Docs</Link></li> */}
                     {isAuthenticated ? 
