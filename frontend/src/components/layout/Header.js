@@ -8,9 +8,9 @@ const Header = () => {
             <Navbar/>
             <div className='name'>
                 <h1>
-                    <span>Simplified</span> Zoning data for any parcel
+                    <span>Simplified</span> Analysing Land Use Patterns Across the World
                 </h1>
-                <p className='details'> We are making life of Architects Easier</p>
+                <p className='details'></p>
                 <Link to='/tool' className='cv-btn'>Explore</Link>
             </div>
         </div>
