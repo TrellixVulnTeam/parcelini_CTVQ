@@ -8,7 +8,7 @@ const Header = () => {
             <Navbar/>
             <div className='name'>
                 <h1>
-                    <span>Simplified</span> Analysing Land Use Patterns Across the World
+                    <span>Analysing</span> Land Use Patterns Across the World
                 </h1>
                 <p className='details'></p>
                 <Link to='/tool' className='cv-btn'>Explore</Link>
